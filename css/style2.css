@@ -19,11 +19,13 @@
   --font-size: 16px;
   --font-size-sp: 14px;
   --letter-spacing: 0.1em;
-  --font-family: 貂ｸ繧ｴ繧ｷ繝�け菴�, "Yu Gothic", YuGothic, "繝偵Λ繧ｮ繝手ｧ偵ざ繧ｷ繝�け ProN W3", "Hiragino Kaku Gothic ProN", "Meiryo UI", "�ｭ�ｳ �ｰ繧ｴ繧ｷ繝�け",
+  --font-family: "Noto Sans JP", "Noto Sans Myanmar", "Noto Sans Devanagari", "Noto Sans", "Yu Gothic", "Meiryo", "Segoe UI", "Helvetica Neue", Arial,
     sans-serif;
-  --serif-font: "貂ｸ譏取悃", "YuMincho", "繝偵Λ繧ｮ繝取�譛� ProN W3", "Hiragino Mincho ProN", "HG譏取悃E", "�ｭ�ｳ �ｰ譏取悃", "�ｭ�ｳ 譏取悃", serif;
+  --serif-font: "Noto Serif JP", "Noto Serif Myanmar", "Noto Serif Devanagari", "Noto Serif", "Yu Mincho", "Hiragino Mincho Pro", "Times New Roman", serif;
+  /* --font-family: 貂ｸ繧ｴ繧ｷ繝�け菴�, "Yu Gothic", YuGothic, "繝偵Λ繧ｮ繝手ｧ偵ざ繧ｷ繝�け ProN W3", "Hiragino Kaku Gothic ProN", "Meiryo UI", "�ｭ�ｳ �ｰ繧ｴ繧ｷ繝�け",
+    sans-serif;
+  --serif-font: "貂ｸ譏取悃", "YuMincho", "繝偵Λ繧ｮ繝取�譛� ProN W3", "Hiragino Mincho ProN", "HG譏取悃E", "�ｭ�ｳ �ｰ譏取悃", "�ｭ�ｳ 譏取悃", serif; */
   --font-awesome: "Font Awesome 6 Free";
-  --script-font: "Oooh Baby", cursive;
   --display-font: "Poppins", var(--font-family);
   --header-height: 100px;
   --header-height-sp: 50px;
@@ -1578,10 +1580,6 @@ footer > div:nth-of-type(2) {
     margin-left: 0;
     margin-top: 1em;
   }
-
-  #part-contact > div {
-    background: linear-gradient(to top, #fff 2em, transparent 2em);
-  }
 }
 
 /* share button */
@@ -2153,7 +2151,7 @@ footer > div:nth-of-type(2) {
   background: #eee;
   padding: 1rem 1.5rem;
   border-radius: 1rem;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); */
   min-width: 260px;
   flex: 1;
 }
@@ -2231,7 +2229,7 @@ footer > div:nth-of-type(2) {
     border: none;
     border-left: 1rem solid transparent;
     border-right: 1rem solid transparent;
-    border-top: 1rem solid black;
+    border-top: 1rem solid #a1c2ec;
   }
 
   .arrow-down::after {
@@ -2240,7 +2238,7 @@ footer > div:nth-of-type(2) {
     transform: translateX(-50%);
     border-left: 1rem solid transparent;
     border-right: 1rem solid transparent;
-    border-top: 1rem solid black;
+    border-top: 1rem solid #a1c2ec;
   }
 }
 
@@ -2654,9 +2652,9 @@ footer > div:nth-of-type(2) {
   width: 30%;
 }
 
-.global-open-campus > div {
+/* .global-open-campus > div {
   width: calc(70% - 2rem);
-}
+} */
 
 .global-online {
   display: flex;
@@ -2911,9 +2909,9 @@ footer > div:nth-of-type(2) {
     width: 80vw;
   }
 
-  .global-open-campus > div {
+  /* .global-open-campus > div {
     width: 100%;
-  }
+  } */
 }
 /* --------------------------
     exam

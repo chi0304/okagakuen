@@ -2,112 +2,113 @@
 <html lang="ja">
   <head>
     <meta charset="UTF-8" />
+    <title>豊岡式グローバルビジネス学科 LP</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="/images/logo.png" type="image/x-icon" />
-    <link href="https://use.fontawesome.com/releases/v6.5.2/css/all.css" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Oooh+Baby&display=swap" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/style2.css" />
-    <script src="script/custom.js"></script>
-    <title>豊岡式グローバルビジネス学科</title>
   </head>
-  <body>
-    <header>
-      <div id="topbar">
-        <h1></h1>
-        <ul id="topbar-menu" class="menu">
-          <li id="menu-item-42" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-42 active">
-            <a href="">日本語</a>
-          </li>
-          <li id="menu-item-41" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-41">
-            <a href="">English</a>
-          </li>
-          <li id="menu-item-38" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-38">
-            <a href="">Tiếng Việt</a>
-          </li>
-          <li id="menu-item-39" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-39">
-            <a href="">नेपाली भाषा</a>
-          </li>
-          <li id="menu-item-40" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-40">
-            <a href="">မြန်မာ</a>
-          </li>
-        </ul>
-      </div>
-      <div id="header-content">
-        <a id="header-logo" href="https://oooka.ac.jp/">
-          <div class="logo-school">
-            <img src="images/logo.png" alt="" />
-            <span>学校法人大岡学園</span>
-          </div>
-        </a>
-        <ul id="header-menu" class="menu">
-          <li id="menu-item-901" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-901">
-            <a href="https://oooka.ac.jp/">ホーム</a>
-          </li>
-          <li id="menu-item-68" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-68">
-            <a href="#">学科・専攻のご紹介</a>
-          </li>
-          <li id="menu-item-60" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-60">
-            <a href="downloads.html">資料請求のリンク</a>
-          </li>
-          <!-- <li id="menu-item-956" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-956"> -->
-          <li id="menu-item-956" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-956">
-            <a href="#open-campus">オープンキャンパス</a>
-          </li>
-        </ul>
-      </div>
-      <div id="drawer">
-        <input id="drawer-flag" type="checkbox" class="drawer-unshown" />
-        <label id="drawer-toggle" for="drawer-flag">
-          <span></span>
-        </label>
-        <label class="drawer-unshown" id="drawer-close" for="drawer-flag"></label>
-        <div id="drawer-content">
-          <div id="drawer-slider"></div>
-          <div id="drawer-menu-wrap">
-            <ul id="mobile-menu" class="menu">
-              <li
-                id="menu-item-238"
-                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-has-children menu-item-238"
-                style="border-top: 0"
-              >
-                <a href="">日本語</a>
-                <a href="">English</a>
-                <a href="">Tiếng Việt</a>
-                <a href="">नेपाली भाषा</a>
-                <a href="">မြန်မာ</a>
-              </li>
-              <li id="menu-item-238" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-has-children menu-item-238">
-                <a href="https://oooka.ac.jp/">ホーム</a>
-                <a href="">ごあいさつ</a>
-                <a href="">学校の特徴</a>
-                <a href="">学科・専攻のご紹介</a>
-                <a href="#open-campus">オープンキャンパス</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </header>
-    <main>
-      <section id="page-header">
-        <div class="content-width">
-          <h2 data-text="GLOBAL BUSINESS">資料請求</h2>
-          <ul id="breadcrumb">
-            <li>
-              <a href="./" class="home">
-                <span>豊岡式グローバルビジネス学科</span>
-              </a>
-            </li>
-            <li>
-              <span>資料請求</span>
-            </li>
-          </ul>
-        </div>
-      </section>
-    </main>
 
-    <section class="downloads-page section-padding" id="downloads">
+  <body class="h-full w-full">
+    <div id="app-root" class="app-wrapper bg-blue-50 flex flex-col">
+      <div id="langbar" class="fixed-bar w-full lang-blur border-b border-blue-700/60">
+        <div class="section-max px-6 py-2 flex items-center justify-between gap-3">
+          <div class="flex items-center gap-2 text-xs text-white/95"></div>
+
+          <div class="lang-wrap flex items-center gap-2">
+            <a href="./index.html" class="lang-pill active bg-white/20 text-white hover:bg-white/25">日本語</a>
+            <a href="./en.html" class="lang-pill bg-white/20 text-white hover:bg-white/25">English</a>
+            <a href="./vn.html" class="lang-pill bg-white/20 text-white hover:bg-white/25">Tiếng Việt</a>
+            <a href="./np.html" class="lang-pill bg-white/20 text-white hover:bg-white/25">नेपाली भाषा</a>
+            <a href="./my.html" class="lang-pill bg-white/20 text-white hover:bg-white/25">မြန်မာ</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Header -->
+      <header id="main-header" class="fixed-header w-full nav-blur header-elevated border-b border-gray-200/60">
+        <nav class="section-max px-6 pt-4 pb-3 flex items-center justify-between">
+          <div class="flex items-center gap-3 min-w-0">
+            <a href="#hero" class="flex items-center gap-3 group min-w-0">
+              <div id="logo-mark" class="w-12 h-12 flex items-center justify-center text-white">
+                <!-- <i class="fas fa-graduation-cap"></i> -->
+                <img src="images/logo.png" alt="" />
+              </div>
+              <div class="flex flex-col leading-tight min-w-0">
+                <!-- <span id="nav-main-title" class="text-xs font-black tracking-[0.18em] text-blue-600 uppercase"> Toyooka Global </span> -->
+                <span id="nav-sub-title" class="text-2xl font-bold text-gray-800 truncate"> 学校法人大岡学園 </span>
+              </div>
+            </a>
+          </div>
+
+          <!-- Desktop nav -->
+          <div id="nav-desktop" class="hidden md:flex items-center gap-2 text-sm font-semibold text-gray-800">
+            <a href="#strength" class="nav-chip nav-eq"><span>強み</span></a>
+            <a href="#curriculum" class="nav-chip nav-eq"><span>時間割</span></a>
+            <a href="#career" class="nav-chip nav-eq"><span>就職とアルバイト</span></a>
+            <a href="#fee" class="nav-chip nav-eq"><span>学費</span></a>
+            <a href="#access" class="nav-chip nav-eq"><span>アクセス</span></a>
+          </div>
+
+          <!-- Mobile menu button -->
+          <button
+            id="mobile-menu-btn"
+            type="button"
+            class="md:hidden inline-flex items-center justify-center w-11 h-11 rounded-2xl bg-white/70 text-blue-700 border border-blue-100 hover:bg-white transition shadow-sm"
+            aria-controls="mobile-menu"
+            aria-expanded="false"
+            aria-label="Open menu"
+          >
+            <i class="fas fa-bars"></i>
+          </button>
+        </nav>
+
+        <!-- Mobile menu sheet -->
+        <div id="mobile-menu" class="mobile-menu-panel md:hidden hidden">
+          <div class="section-max px-4 pb-4">
+            <div class="mobile-sheet bg-white/95 border border-gray-200/70 overflow-hidden">
+              <div class="px-4 py-3 flex items-center justify-between border-b border-gray-100">
+                <div class="text-sm font-black text-gray-800">メニュー <span class="ml-2 text-xs font-semibold text-blue-600">Navigation</span></div>
+                <span class="text-xs text-gray-500">Tap to jump</span>
+              </div>
+
+              <div class="p-2 grid gap-2">
+                <a href="#strength" class="px-4 py-3 rounded-2xl hover:bg-blue-50 transition flex items-center justify-between">
+                  <span class="flex items-center gap-2"><i class="fas fa-star text-blue-600"></i>豊岡式の強み</span>
+                  <i class="fas fa-chevron-right text-gray-400"></i>
+                </a>
+                <a href="#curriculum" class="px-4 py-3 rounded-2xl hover:bg-blue-50 transition flex items-center justify-between">
+                  <span class="flex items-center gap-2"><i class="fas fa-book text-blue-600"></i>カリキュラム</span>
+                  <i class="fas fa-chevron-right text-gray-400"></i>
+                </a>
+                <a href="#career" class="px-4 py-3 rounded-2xl hover:bg-blue-50 transition flex items-center justify-between">
+                  <span class="flex items-center gap-2"><i class="fas fa-briefcase text-blue-600"></i>就職</span>
+                  <i class="fas fa-chevron-right text-gray-400"></i>
+                </a>
+                <a href="#fee" class="px-4 py-3 rounded-2xl hover:bg-blue-50 transition flex items-center justify-between">
+                  <span class="flex items-center gap-2"><i class="fas fa-yen-sign text-blue-600"></i>学費</span>
+                  <i class="fas fa-chevron-right text-gray-400"></i>
+                </a>
+                <a href="#access" class="px-4 py-3 rounded-2xl hover:bg-blue-50 transition flex items-center justify-between">
+                  <span class="flex items-center gap-2"><i class="fas fa-location-dot text-blue-600"></i>アクセス</span>
+                  <i class="fas fa-chevron-right text-gray-400"></i>
+                </a>
+
+                <a
+                  href="#contact"
+                  class="mt-1 px-4 py-3 rounded-2xl bg-blue-600 text-white hover:bg-blue-700 transition flex items-center justify-between shadow"
+                >
+                  <span class="flex items-center gap-2"><i class="fas fa-envelope"></i>お問い合わせ</span>
+                  <i class="fas fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+    <section class="downloads-page section-padding py-5" id="downloads">
       <div class="content-width">
         <div class="dl-head">
           <h2 class="dl-title">2026年度募集要項</h2>
@@ -205,11 +206,19 @@
       </div>
     </section>
 
-    <footer>
-      <div></div>
-      <div id="copyright">Copyright©学校法人 大岡学園 All Rights Reserved.</div>
-    </footer>
-    <div id="loading"></div>
-    <script src="script/custom.js"></script>
+      <footer class="w-full bg-blue-600 text-white border-t-4 border-blue-700 relative">
+        <div class="floating-circles">
+          <div class="circle circle-1"></div>
+        </div>
+        <div class="section-max px-6 py-8 relative z-10">
+          <div class="text-center mb-6">
+            <p id="footer-message" class="font-black text-2xl mb-3">
+              <i class="fas fa-heart mr-2"></i> 豊岡で学び、豊岡で働く。あなたの未来は、ここからはじまります。 <i class="fas fa-heart ml-2"></i>
+            </p>
+            <p class="text-sm opacity-90">学校法人大岡学園ビジネス専門学校　キャリアカレッジ但馬　豊岡式グローバルビジネス学科</p>
+          </div>
+          <!-- <div class="text-center text-xs opacity-75">© 2024 Toyooka Global Business Program. All rights reserved.</div> -->
+        </div>
+      </footer>
   </body>
 </html>

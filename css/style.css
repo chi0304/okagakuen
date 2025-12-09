@@ -1,8 +1,29 @@
 /* =========================
   Base / Layout
 ========================= */
+:root {
+  --container: 1120px;
+
+  /* spacing */
+  --section-y: clamp(56px, 6vw, 92px);
+  --section-head-gap: clamp(22px, 2.4vw, 34px);
+
+  /* typography */
+  --font-sans: "Noto Sans JP", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic",
+    "Meiryo", sans-serif;
+  --text: #0f172a;
+  --muted: #475569;
+}
+
 body {
   box-sizing: border-box;
+  font-family: var(--font-sans);
+  color: var(--text);
+  line-height: 1.7;
+  letter-spacing: 0.01em;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 html,
 body {
@@ -20,9 +41,12 @@ body {
 }
 
 .section-max {
-  max-width: 1120px;
+  max-width: var(--container);
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
+  /* padding-inline: clamp(16px, 3vw, 24px); */
+  padding-inline: clamp(12px, 2vw, 20px);
 }
 
 /* Reserve space for fixed bars */
@@ -322,8 +346,8 @@ section[id] {
 .timeline-year::before {
   content: "";
   position: absolute;
-  left: -2.25rem;
-  top: 0.5rem;
+  left: -2.7rem;
+  top: 0;
   width: 20px;
   height: 20px;
   border-radius: 50%;
@@ -462,9 +486,9 @@ span {
   }
 }
 
-@media (max-width: 380px) {
+@media (max-width: 540px) {
   .lang-pill {
-    font-size: 11px;
+    font-size: 8px;
     padding: 0.3rem 0.62rem;
   }
 }
@@ -622,13 +646,15 @@ span {
 
   .imgtxt__txt {
     width: 100%;
-    margin: 0;
+    margin: 0 0 25px 0;
+    height: auto;
     padding: 18px 16px;
     border-radius: 16px;
   }
 
   .imgtxt--rev .imgtxt__txt {
-    padding: 18px 16px; /* mobile same */
+    padding: 18px 16px;
+    margin-bottom: 25px;
   }
 
   .imgtxt__h3 {
@@ -799,5 +825,307 @@ span {
   }
   .floating-btn__text {
     display: none;
+  }
+}
+
+/* =========================
+   Global responsive hardening
+   ========================= */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+img,
+svg,
+video,
+canvas {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Give anchor jumps room for fixed bars */
+section[id],
+[id].anchor {
+  scroll-margin-top: calc(var(--langbar-h, 48px) + var(--header-h, 76px) + 16px);
+}
+
+/* Content container used in some pages */
+.content-width {
+  max-width: 1120px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-inline: clamp(16px, 3vw, 24px);
+}
+
+/* Small screens: reduce horizontal padding a bit */
+@media (max-width: 640px) {
+  .section-max {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .content-width {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+/* =========================
+   Language bar improvements (wrap/scroll)
+   ========================= */
+.lang-wrap {
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+@media (max-width: 640px) {
+  .lang-wrap {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    gap: 0.5rem;
+  }
+  .lang-wrap::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* =========================
+   Desktop nav equal width
+   ========================= */
+#nav-desktop {
+  align-items: center;
+  /* flex-wrap: nowrap; */
+  /* gap: 12px; */
+  flex-wrap: wrap;
+  max-width: 100%;
+}
+#nav-desktop .nav-eq {
+  /* equal width buttons */
+  width: clamp(7rem, 8.5vw, 10rem);
+  justify-content: center;
+  text-align: center;
+  flex: 0 0 auto;
+}
+@media (max-width: 900px) {
+  #nav-desktop .nav-eq {
+    width: clamp(6.25rem, 9vw, 8.5rem);
+  }
+}
+
+/* prevent long labels from breaking layout */
+.nav-chip span {
+  display: block;
+  overflow: hidden;
+  /* text-overflow: ellipsis;
+  white-space: nowrap; */
+  white-space: normal;
+  overflow: visible;
+}
+
+/* =========================
+   Page header (資料請求) + breadcrumb
+   ========================= */
+#page-header {
+  position: relative;
+  padding: 6.25rem 0 2.25rem;
+  background: radial-gradient(1200px 300px at 40% 0%, rgba(59, 130, 246, 0.18), transparent 60%), linear-gradient(180deg, #eff6ff 0%, #ffffff 70%);
+  border-bottom: 1px solid rgba(148, 163, 184, 0.5);
+}
+#page-header h2 {
+  position: relative;
+  font-weight: 900;
+  letter-spacing: 0.06em;
+  line-height: 1.1;
+  font-size: clamp(1.6rem, 2.6vw, 2.25rem);
+  color: #0f172a;
+}
+#page-header h2::before {
+  content: attr(data-text);
+  position: absolute;
+  left: 0;
+  top: -1.1rem;
+  font-size: 0.9rem;
+  letter-spacing: 0.18em;
+  color: rgba(37, 99, 235, 0.85);
+  font-weight: 900;
+}
+#breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.9rem;
+  font-size: 0.85rem;
+  color: #475569;
+}
+#breadcrumb li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+#breadcrumb li + li::before {
+  content: "›";
+  color: rgba(100, 116, 139, 0.9);
+}
+#breadcrumb a {
+  color: #2563eb;
+  font-weight: 700;
+}
+#breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+/* =========================
+   Downloads grid (PDF cards)
+   ========================= */
+.section-padding {
+  padding: 3rem 0;
+}
+.downloads-page .dl-head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+.downloads-page .dl-title {
+  font-size: clamp(1.2rem, 2vw, 1.6rem);
+  font-weight: 900;
+  color: #0f172a;
+}
+.dl-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+}
+@media (max-width: 1024px) {
+  .dl-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+@media (max-width: 768px) {
+  .dl-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 420px) {
+  .dl-grid {
+    grid-template-columns: 1fr;
+  }
+}
+.dl-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 1rem 1rem;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.86);
+  border: 1px solid rgba(148, 163, 184, 0.45);
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.06);
+  transition: transform 0.15s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  min-width: 0;
+}
+.dl-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(37, 99, 235, 0.55);
+  box-shadow: 0 14px 32px rgba(15, 23, 42, 0.1);
+}
+.dl-icon {
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  border-radius: 14px;
+  background: rgba(37, 99, 235, 0.1);
+  color: #2563eb;
+  flex: 0 0 auto;
+}
+.dl-text {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+.dl-kicker {
+  font-size: 0.75rem;
+  font-weight: 900;
+  color: #2563eb;
+  letter-spacing: 0.04em;
+}
+.dl-name {
+  font-size: 0.95rem;
+  font-weight: 900;
+  color: #0f172a;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.dl-arrow {
+  color: rgba(100, 116, 139, 0.9);
+  flex: 0 0 auto;
+}
+.dl-cta {
+  margin-top: 1.25rem;
+}
+.dl-cta-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  padding: 1rem 1.1rem;
+  border-radius: 999px;
+  background: #2563eb;
+  color: #fff;
+  font-weight: 900;
+  box-shadow: 0 12px 30px rgba(37, 99, 235, 0.22);
+  transition: transform 0.15s ease, background 0.2s ease;
+  text-align: center;
+}
+.dl-cta-btn:hover {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+}
+
+/* =========================
+   Safer fixed header + main spacing
+   ========================= */
+.fixed-bar,
+.fixed-header {
+  width: 100%;
+}
+body {
+  padding-top: calc(var(--langbar-h, 44px) + var(--header-h, 72px));
+}
+@media (max-width: 640px) {
+  body {
+    padding-top: calc(var(--langbar-h, 44px) + var(--header-h, 64px));
+  }
+}
+
+/* =========================
+   Make grids less likely to overflow on tablet
+   ========================= */
+@media (max-width: 768px) {
+  .grid {
+    min-width: 0;
+  }
+  .cute-card {
+    min-width: 0;
+  }
+  .timeline-compact {
+    padding-left: 2.25rem;
+  }
+  .box_fee {
+    width: 50%;
   }
 }

@@ -574,7 +574,7 @@ span {
 
 /* icon */
 .imgtxt__icon {
-  width: 44px;
+  min-width: 44px;
   height: 44px;
   border-radius: 14px;
   display: inline-flex;
@@ -871,13 +871,19 @@ section[id],
 }
 
 /* Content container used in some pages */
-.content-width {
+/* .content-width {
   max-width: 1120px;
   margin-left: auto;
   margin-right: auto;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
   padding-inline: clamp(16px, 3vw, 24px);
+} */
+.content-width {
+  max-width: var(--container);
+  margin-left: auto;
+  margin-right: auto;
+  padding-inline: clamp(16px, 3vw, 24px); /* giống section-max */
 }
 
 /* Small screens: reduce horizontal padding a bit */
@@ -1205,10 +1211,10 @@ body {
     font-size: 17px !important;
   }
   .text-3xl {
-    font-size: 1.5rem !important;
+    font-size: 1.4rem !important;
   }
   .text-2xl {
-    font-size: 1.25rem !important;
+    font-size: 1.2rem !important;
   }
 }
 

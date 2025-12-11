@@ -63,12 +63,6 @@
   gap: 0.5rem;
   white-space: nowrap;
 }
-@media (min-width: 800px) {
-  .downloads-page {
-    margin-top: 30px;
-    min-height: 61vh;
-  }
-}
 @media (max-width: 640px) {
   .downloads-page .dl-item {
     grid-template-columns: 26px 1fr;

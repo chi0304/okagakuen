@@ -17,10 +17,10 @@
 
           <div class="lang-wrap flex items-center gap-2">
             <a href="./index.html" class="lang-pill active bg-white/20 text-white hover:bg-white/25">日本語</a>
-            <a href="./en.html" class="lang-pill bg-white/20 text-white hover:bg-white/25">English</a>
-            <a href="./vn.html" class="lang-pill bg-white/20 text-white hover:bg-white/25">Tiếng Việt</a>
-            <a href="./np.html" class="lang-pill bg-white/20 text-white hover:bg-white/25">नेपाली भाषा</a>
-            <a href="./my.html" class="lang-pill bg-white/20 text-white hover:bg-white/25">မြန်မာ</a>
+            <a href="eng/index.html" class="lang-pill bg-white/20 text-white hover:bg-white/25">English</a>
+            <a href="vn/index.html" class="lang-pill bg-white/20 text-white hover:bg-white/25">Tiếng Việt</a>
+            <a href="np/index.html" class="lang-pill bg-white/20 text-white hover:bg-white/25">नेपाली भाषा</a>
+            <a href="my/index.html" class="lang-pill bg-white/20 text-white hover:bg-white/25">မြန်မာ</a>
           </div>
         </div>
       </div>
@@ -32,7 +32,7 @@
             <a href="#hero" class="flex items-center gap-3 group min-w-0">
               <div id="logo-mark" class="w-12 h-12 flex items-center justify-center text-white">
                 <!-- <i class="fas fa-graduation-cap"></i> -->
-                <img src="images/logo.png" alt="" />
+                <img src="images/logo.webp" alt="" />
               </div>
               <div class="flex flex-col leading-tight min-w-0">
                 <!-- <span id="nav-main-title" class="text-xs font-black tracking-[0.18em] text-blue-600 uppercase"> Toyooka Global </span> -->
@@ -64,7 +64,7 @@
         </nav>
 
         <!-- Mobile menu sheet -->
-        <div id="mobile-menu" class="mobile-menu-panel md:hidden hidden">
+        <div id="mobile-menu" class="mobile-menu-panel lg:hidden hidden">
           <div class="section-max px-4 pb-4">
             <div class="mobile-sheet bg-white/95 border border-gray-200/70 overflow-hidden">
               <div class="px-4 py-3 flex items-center justify-between border-b border-gray-100">
@@ -74,15 +74,15 @@
 
               <div class="p-2 grid gap-2">
                 <a href="#strength" class="px-4 py-3 rounded-2xl hover:bg-blue-50 transition flex items-center justify-between">
-                  <span class="flex items-center gap-2"><i class="fas fa-star text-blue-600"></i>豊岡式の強み</span>
+                  <span class="flex items-center gap-2"><i class="fas fa-star text-blue-600"></i>強み</span>
                   <i class="fas fa-chevron-right text-gray-400"></i>
                 </a>
                 <a href="#curriculum" class="px-4 py-3 rounded-2xl hover:bg-blue-50 transition flex items-center justify-between">
-                  <span class="flex items-center gap-2"><i class="fas fa-book text-blue-600"></i>カリキュラム</span>
+                  <span class="flex items-center gap-2"><i class="fas fa-book text-blue-600"></i>時間割</span>
                   <i class="fas fa-chevron-right text-gray-400"></i>
                 </a>
                 <a href="#career" class="px-4 py-3 rounded-2xl hover:bg-blue-50 transition flex items-center justify-between">
-                  <span class="flex items-center gap-2"><i class="fas fa-briefcase text-blue-600"></i>就職</span>
+                  <span class="flex items-center gap-2"><i class="fas fa-briefcase text-blue-600"></i>就職とアルバイト</span>
                   <i class="fas fa-chevron-right text-gray-400"></i>
                 </a>
                 <a href="#fee" class="px-4 py-3 rounded-2xl hover:bg-blue-50 transition flex items-center justify-between">
@@ -101,7 +101,7 @@
 
       <main id="main-content" class="flex-1 w-full">
         <div>
-          <img src="./images/topimg.png" alt="" />
+          <img src="./images/topimg.webp" alt="" />
         </div>
 
         <!-- Strength Section (docx) -->
@@ -125,7 +125,7 @@
               <!-- Item 1: image left / text right -->
               <article class="imgtxt fade-in-up">
                 <figure class="imgtxt__img">
-                  <img src="images/strength_1.png" alt="授業風景" loading="lazy" />
+                  <img src="images/strength_1.webp" alt="授業風景" loading="lazy" />
                 </figure>
 
                 <div class="imgtxt__txt">
@@ -156,7 +156,7 @@
               <!-- Item 2: reverse (image right / text left) -->
               <article class="imgtxt imgtxt--rev fade-in-up">
                 <figure class="imgtxt__img">
-                  <img src="images/strength_2.png" alt="グループワーク" loading="lazy" />
+                  <img src="images/strength_2.webp" alt="グループワーク" loading="lazy" />
                 </figure>
 
                 <div class="imgtxt__txt">
@@ -164,9 +164,11 @@
                     <div class="imgtxt__icon is-orange"><i class="fas fa-briefcase"></i></div>
                     <span class="text-xl font-bold alight-center">豊富なアルバイト・インターンシップ先</span>
                   </div>
+
                   <p class="imgtxt__p">
                     旅館・ホテル・飲食店・工房など、通学圏内に多くの実践の場があります。 2年目にはインターンとして企業で働き、就職につながる経験を積みます。
                   </p>
+
                   <div class="imgtxt__note is-blue">
                     <p class="imgtxt__noteP">
                       <span class="font-semibold text-xl">主なアルバイト・インターン先：</span><br />
@@ -176,20 +178,23 @@
                       ・観光案内所・地域イベントスタッフ
                     </p>
                   </div>
-                <div class="imgtxt__note is-blue">
-                  <p class="imgtxt__noteP">
-                    <span class="font-semibold text-xl">特徴：</span><br />
-                    ・通学圏内に多数の就業先（徒歩・自転車圏内）<br />
-                    ・週28時間以内の就労ルールに基づく安心サポート<br />
-                    ・学校が企業と連携し、紹介・面接・契約を支援
-                  </p>
+
+                  <div class="imgtxt__note is-blue">
+                    <p class="imgtxt__noteP">
+                      <span class="font-semibold text-xl">特徴：</span><br />
+                      ・通学圏内に多数の就業先（徒歩・自転車圏内）<br />
+                      ・週28時間以内の就労ルールに基づく安心サポート<br />
+                      ・学校が企業と連携し、紹介・面接・契約を支援
+                    </p>
+                  </div>
                 </div>
               </article>
+
 
               <!-- Item 3: image left / text right -->
               <article class="imgtxt fade-in-up">
                 <figure class="imgtxt__img">
-                  <img src="images/strength_3.png" alt="実習風景" loading="lazy" />
+                  <img src="images/strength_3.webp" alt="実習風景" loading="lazy" />
                 </figure>
 
                 <div class="imgtxt__txt">
@@ -383,6 +388,7 @@
                 <h2 class="text-3xl md:text-4xl font-black text-blue-900">就職とアルバイト ― 働きながらキャリアをつくる</h2>
               </div>
               <p class="section-lead text-base md:text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed mt-6">
+                豊岡式の就職モデル<br>
                 「学び」→「アルバイト」→「インターン」→「就職」<br>
                 この流れを1つの学科の中で完結できるのが、豊岡式の大きな特徴です。
               </p>
@@ -444,10 +450,10 @@
               </div>
 
               <img
-                src="images/career.png"
+                src="images/career.webp"
                 alt="就職活動の様子"
                 class="w-full h-full object-cover rounded-xl shadow-xl cute-card scale-in"
-                onerror="this.src=''; this.alt='Image failed to load'; this.style.display='none';"
+                onerror="this.removeAttribute('src'); this.style.display='none';"
               />
             </div>
 
@@ -650,7 +656,7 @@
                   src="https://images.unsplash.com/photo-1554224311-beee460c201f?w=600&amp;h=300&amp;fit=crop"
                   alt="学費相談の様子"
                   class="w-full h-48 object-cover rounded-xl shadow-lg cute-card"
-                  onerror="this.src=''; this.alt='Image failed to load'; this.style.display='none';"
+                  onerror="this.removeAttribute('src'); this.style.display='none';"
                 />
               </div>
             </div>
@@ -709,14 +715,56 @@
 
                 <div class="mt-6">
                   <img
-                    src="images/travel.png"
+                    src="images/travel.webp"
                     alt="豊岡の風景"
                     class="w-full h-56 object-cover rounded-xl shadow-lg cute-card"
-                    onerror="this.src=''; this.alt='Image failed to load'; this.style.display='none';"
+                    onerror="this.removeAttribute('src'); this.style.display='none';"
                   />
                 </div>
               </div>
             </div>
+
+<div class="access-address mt-10 fade-in-up">
+  <div class="access-address__inner">
+    <div class="access-address__top">
+      <div class="access-address__left">
+        <div class="access-address__icon" aria-hidden="true">
+          <i class="fas fa-location-dot"></i>
+        </div>
+
+        <div class="access-address__text">
+          <p class="access-address__kicker">ACCESS</p>
+          <p class="access-address__addr">〒668-0065　兵庫県豊岡市戸牧500-3</p>
+        </div>
+      </div>
+
+      <div class="access-address__right">
+        <a class="access-address__chip" href="tel:0796223786">
+          <span class="label">TEL</span>
+          <span class="value">0796-22-3786</span>
+        </a>
+
+        <div class="access-address__chip is-fax">
+          <span class="label">FAX</span>
+          <span class="value">0796-24-2282</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="access-address__map">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m13!1m8!1m3!1d3246.8055352742217!2d134.810105!3d35.533803!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMzXCsDMyJzAxLjciTiAxMzTCsDQ4JzM2LjQiRQ!5e0!3m2!1svi!2sus!4v1765353860264!5m2!1svi!2sus"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="Google Map"
+      ></iframe>
+    </div>
+  </div>
+</div>
+
+
+
           </div>
         </section>
 
@@ -754,9 +802,9 @@
                 </ul>
 
                 <a
-                  href="#contact"
-                  class="w-full inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-blue-600 text-white text-lg font-bold shadow-xl hover:shadow-2xl hover:bg-blue-700 transition-all transform hover:scale-105"
-                >
+                  href="https://forms.gle/edKUzMiLNHFTjxWNA"
+                  class="w-full inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-blue-600 text-white text-lg font-bold shadow-xl hover:shadow-2xl hover:bg-blue-700 transition-all transform hover:scale-105 opencampus-btn"
+                  target="_blank">
                   <i class="fas fa-calendar-check"></i> オープンキャンパスに申し込む
                 </a>
 
@@ -799,10 +847,10 @@
 
             <div class="mt-12 scale-in">
               <img
-                src="images/school.png"
+                src="images/school.webp"
                 alt="キャンパス風景"
                 class="w-full h-64 object-cover rounded-xl shadow-2xl cute-card"
-                onerror="this.src=''; this.alt='Image failed to load'; this.style.display='none';"
+                onerror="this.removeAttribute('src'); this.style.display='none';"
               />
             </div>
           </div>
@@ -844,83 +892,6 @@
       </footer>
     </div>
 
-    <!-- Minimal JS: only for heights + mobile menu + header shadow -->
-    <script>
-      (function () {
-        function setHeights() {
-          var langbar = document.getElementById("langbar");
-          var header = document.getElementById("main-header");
-          if (!langbar || !header) return;
-
-          var langH = Math.round(langbar.getBoundingClientRect().height);
-          var headerH = Math.round(header.getBoundingClientRect().height);
-
-          document.documentElement.style.setProperty("--langbar-h", langH + "px");
-          document.documentElement.style.setProperty("--header-h", headerH + "px");
-        }
-
-        function initMobileMenu() {
-          var btn = document.getElementById("mobile-menu-btn");
-          var menu = document.getElementById("mobile-menu");
-          if (!btn || !menu) return;
-
-          function closeMenu() {
-            menu.classList.add("hidden");
-            btn.setAttribute("aria-expanded", "false");
-            var icon = btn.querySelector("i");
-            if (icon) icon.className = "fas fa-bars";
-          }
-
-          function openMenu() {
-            menu.classList.remove("hidden");
-            btn.setAttribute("aria-expanded", "true");
-            var icon = btn.querySelector("i");
-            if (icon) icon.className = "fas fa-xmark";
-          }
-
-          btn.addEventListener("click", function () {
-            if (menu.classList.contains("hidden")) openMenu();
-            else closeMenu();
-          });
-
-          menu.querySelectorAll('a[href^="#"]').forEach(function (a) {
-            a.addEventListener("click", closeMenu);
-          });
-
-          document.addEventListener("keydown", function (e) {
-            if (e.key === "Escape") closeMenu();
-          });
-
-          window.addEventListener("resize", function () {
-            if (window.innerWidth >= 768) closeMenu();
-          });
-        }
-
-        function initHeaderShadow() {
-          var header = document.getElementById("main-header");
-          if (!header) return;
-
-          function onScroll() {
-            if (window.scrollY > 8) header.classList.add("scrolled");
-            else header.classList.remove("scrolled");
-          }
-
-          window.addEventListener("scroll", onScroll, { passive: true });
-          onScroll();
-        }
-
-        document.addEventListener("DOMContentLoaded", function () {
-          setHeights();
-          setTimeout(setHeights, 180);
-          initMobileMenu();
-          initHeaderShadow();
-        });
-
-        window.addEventListener("resize", function () {
-          setHeights();
-          setTimeout(setHeights, 120);
-        });
-      })();
-    </script>
+     <script src="script/custom.js"></script>
   </body>
 </html>

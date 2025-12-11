@@ -30,10 +30,10 @@
       <header id="main-header" class="fixed-header w-full nav-blur header-elevated border-b border-gray-200/60">
         <nav class="section-max px-6 pt-4 pb-3 flex items-center justify-between">
           <div class="flex items-center gap-3 min-w-0">
-            <a href="#hero" class="flex items-center gap-3 group min-w-0">
+            <a href=".#hero" class="flex items-center gap-3 group min-w-0">
               <div id="logo-mark" class="w-12 h-12 flex items-center justify-center text-white">
                 <!-- <i class="fas fa-graduation-cap"></i> -->
-                <img src="images/logo.png" alt="" />
+                <img src="images/logo.webp" alt="" />
               </div>
               <div class="flex flex-col leading-tight min-w-0">
                 <!-- <span id="nav-main-title" class="text-xs font-black tracking-[0.18em] text-blue-600 uppercase"> Toyooka Global </span> -->
@@ -43,19 +43,19 @@
           </div>
 
           <!-- Desktop nav -->
-          <div id="nav-desktop" class="hidden md:flex items-center gap-2 text-sm font-semibold text-gray-800">
-            <a href="#strength" class="nav-chip nav-eq"><span>強み</span></a>
-            <a href="#curriculum" class="nav-chip nav-eq"><span>時間割</span></a>
-            <a href="#career" class="nav-chip nav-eq"><span>就職とアルバイト</span></a>
-            <a href="#fee" class="nav-chip nav-eq"><span>学費</span></a>
-            <a href="#access" class="nav-chip nav-eq"><span>アクセス</span></a>
+          <div id="nav-desktop" class="hidden lg:flex items-center gap-2 text-sm font-semibold text-gray-800">
+            <a href=".#strength" class="nav-chip nav-eq"><span>強み</span></a>
+            <a href=".#curriculum" class="nav-chip nav-eq"><span>時間割</span></a>
+            <a href=".#career" class="nav-chip"><span>就職とアルバイト</span></a>
+            <a href=".#fee" class="nav-chip nav-eq"><span>学費</span></a>
+            <a href=".#access" class="nav-chip nav-eq"><span>アクセス</span></a>
           </div>
 
           <!-- Mobile menu button -->
           <button
             id="mobile-menu-btn"
             type="button"
-            class="md:hidden inline-flex items-center justify-center w-11 h-11 rounded-2xl bg-white/70 text-blue-700 border border-blue-100 hover:bg-white transition shadow-sm"
+            class="lg:hidden inline-flex items-center justify-center w-11 h-11 rounded-2xl bg-white/70 text-blue-700 border border-blue-100 hover:bg-white transition shadow-sm"
             aria-controls="mobile-menu"
             aria-expanded="false"
             aria-label="Open menu"
@@ -65,42 +65,34 @@
         </nav>
 
         <!-- Mobile menu sheet -->
-        <div id="mobile-menu" class="mobile-menu-panel md:hidden hidden">
+        <div id="mobile-menu" class="mobile-menu-panel lg:hidden hidden">
           <div class="section-max px-4 pb-4">
             <div class="mobile-sheet bg-white/95 border border-gray-200/70 overflow-hidden">
               <div class="px-4 py-3 flex items-center justify-between border-b border-gray-100">
-                <div class="text-sm font-black text-gray-800">メニュー <span class="ml-2 text-xs font-semibold text-blue-600">Navigation</span></div>
-                <span class="text-xs text-gray-500">Tap to jump</span>
+                <div class="text-sm font-black text-gray-800">メニュー</div>
+                <!-- <span class="text-xs text-gray-500">Tap to jump</span> -->
               </div>
 
               <div class="p-2 grid gap-2">
-                <a href="#strength" class="px-4 py-3 rounded-2xl hover:bg-blue-50 transition flex items-center justify-between">
+                <a href=".#strength" class="px-4 py-3 rounded-2xl hover:bg-blue-50 transition flex items-center justify-between">
                   <span class="flex items-center gap-2"><i class="fas fa-star text-blue-600"></i>豊岡式の強み</span>
                   <i class="fas fa-chevron-right text-gray-400"></i>
                 </a>
-                <a href="#curriculum" class="px-4 py-3 rounded-2xl hover:bg-blue-50 transition flex items-center justify-between">
+                <a href=".#curriculum" class="px-4 py-3 rounded-2xl hover:bg-blue-50 transition flex items-center justify-between">
                   <span class="flex items-center gap-2"><i class="fas fa-book text-blue-600"></i>カリキュラム</span>
                   <i class="fas fa-chevron-right text-gray-400"></i>
                 </a>
-                <a href="#career" class="px-4 py-3 rounded-2xl hover:bg-blue-50 transition flex items-center justify-between">
+                <a href=".#career" class="px-4 py-3 rounded-2xl hover:bg-blue-50 transition flex items-center justify-between">
                   <span class="flex items-center gap-2"><i class="fas fa-briefcase text-blue-600"></i>就職</span>
                   <i class="fas fa-chevron-right text-gray-400"></i>
                 </a>
-                <a href="#fee" class="px-4 py-3 rounded-2xl hover:bg-blue-50 transition flex items-center justify-between">
+                <a href=".#fee" class="px-4 py-3 rounded-2xl hover:bg-blue-50 transition flex items-center justify-between">
                   <span class="flex items-center gap-2"><i class="fas fa-yen-sign text-blue-600"></i>学費</span>
                   <i class="fas fa-chevron-right text-gray-400"></i>
                 </a>
-                <a href="#access" class="px-4 py-3 rounded-2xl hover:bg-blue-50 transition flex items-center justify-between">
+                <a href=".#access" class="px-4 py-3 rounded-2xl hover:bg-blue-50 transition flex items-center justify-between">
                   <span class="flex items-center gap-2"><i class="fas fa-location-dot text-blue-600"></i>アクセス</span>
                   <i class="fas fa-chevron-right text-gray-400"></i>
-                </a>
-
-                <a
-                  href="#contact"
-                  class="mt-1 px-4 py-3 rounded-2xl bg-blue-600 text-white hover:bg-blue-700 transition flex items-center justify-between shadow"
-                >
-                  <span class="flex items-center gap-2"><i class="fas fa-envelope"></i>お問い合わせ</span>
-                  <i class="fas fa-arrow-right"></i>
                 </a>
               </div>
             </div>
@@ -111,66 +103,66 @@
     <section class="downloads-page section-padding py-5" id="downloads">
       <div class="content-width">
         <div class="dl-head">
-          <h2 class="dl-title">2026年度募集要項</h2>
+          <h2 class="dl-title text-center w-full mb-3 text-blue-500">2026年度募集要項</h2>
           <!-- <p class="dl-note">※ 2025年9月1日願書受付開始</p> -->
         </div>
 
-        <div class="dl-grid">
-          <a class="dl-card" href="/files/2026/jp/1-1_outline.pdf" target="_blank" rel="noopener">
+        <!-- <div class="dl-grid"> -->
+          <a class="dl-card" href="/pdf/A_apply.pdf" target="_blank" rel="noopener">
             <span class="dl-icon"><i class="fa-solid fa-file-pdf"></i></span>
             <span class="dl-text">
-              <span class="dl-kicker">1-1</span>
-              <span class="dl-name">【募集要項】</span>
+              <span class="dl-kicker">1.【A】</span>
+              <span class="dl-name">入学願書　2026</span>
             </span>
             <i class="fa-solid fa-arrow-down-long dl-arrow" aria-hidden="true"></i>
           </a>
 
-          <a class="dl-card" href="/files/2026/jp/1-2_ao-entry-sheet.pdf" target="_blank" rel="noopener">
+          <a class="dl-card" href="/pdf/B_reason.pdf" target="_blank" rel="noopener">
             <span class="dl-icon"><i class="fa-solid fa-file-pdf"></i></span>
             <span class="dl-text">
-              <span class="dl-kicker">1-2</span>
-              <span class="dl-name">【AOエントリーシート】</span>
+              <span class="dl-kicker">2.【B】</span>
+              <span class="dl-name">志願理由書（留学生）</span>
             </span>
             <i class="fa-solid fa-arrow-down-long dl-arrow" aria-hidden="true"></i>
           </a>
 
-          <a class="dl-card" href="/files/2026/jp/A_application.pdf" target="_blank" rel="noopener">
+          <a class="dl-card" href="/pdf/C_funds.pdf" target="_blank" rel="noopener">
             <span class="dl-icon"><i class="fa-solid fa-file-pdf"></i></span>
             <span class="dl-text">
-              <span class="dl-kicker">2.【A】</span>
-              <span class="dl-name">入学願書</span>
+              <span class="dl-kicker">3.【C】</span>
+              <span class="dl-name">経費支弁書（留学生）</span>
             </span>
             <i class="fa-solid fa-arrow-down-long dl-arrow" aria-hidden="true"></i>
           </a>
 
-          <a class="dl-card" href="/files/2026/jp/B_reason.pdf" target="_blank" rel="noopener">
+          <a class="dl-card" href="pdf/D_fee.pdf" target="_blank" rel="noopener">
             <span class="dl-icon"><i class="fa-solid fa-file-pdf"></i></span>
             <span class="dl-text">
-              <span class="dl-kicker">3.【B】</span>
-              <span class="dl-name">志願理由書</span>
+              <span class="dl-kicker">4.【D】</span>
+              <span class="dl-name">入学選考料振込証明書（留学生）</span>
             </span>
             <i class="fa-solid fa-arrow-down-long dl-arrow" aria-hidden="true"></i>
           </a>
 
-          <a class="dl-card" href="/files/2026/jp/C_recommend.pdf" target="_blank" rel="noopener">
+          <a class="dl-card" href="pdf/E_pledge.pdf" target="_blank" rel="noopener">
             <span class="dl-icon"><i class="fa-solid fa-file-pdf"></i></span>
             <span class="dl-text">
-              <span class="dl-kicker">4.【C】</span>
-              <span class="dl-name">推薦書</span>
+              <span class="dl-kicker">5.【E】</span>
+              <span class="dl-name">誓約書・身元保証書（留学生）</span>
             </span>
             <i class="fa-solid fa-arrow-down-long dl-arrow" aria-hidden="true"></i>
           </a>
 
-          <a class="dl-card" href="/files/2026/jp/D_school-recommend.pdf" target="_blank" rel="noopener">
+          <a class="dl-card" href="pdf/F_foreign.pdf" target="_blank" rel="noopener">
             <span class="dl-icon"><i class="fa-solid fa-file-pdf"></i></span>
             <span class="dl-text">
-              <span class="dl-kicker">5.【D】</span>
-              <span class="dl-name">指定校推薦書</span>
+              <span class="dl-kicker">6.【F】</span>
+              <span class="dl-name">外国人願書　分納申請書（留学生）</span>
             </span>
             <i class="fa-solid fa-arrow-down-long dl-arrow" aria-hidden="true"></i>
           </a>
 
-          <a class="dl-card" href="/files/2026/jp/E_pledge-guarantor.pdf" target="_blank" rel="noopener">
+          <!-- <a class="dl-card" href="/files/2026/jp/E_pledge-guarantor.pdf" target="_blank" rel="noopener">
             <span class="dl-icon"><i class="fa-solid fa-file-pdf"></i></span>
             <span class="dl-text">
               <span class="dl-kicker">6.【E】</span>
@@ -194,15 +186,53 @@
               <span class="dl-name">減免申請書</span>
             </span>
             <i class="fa-solid fa-arrow-down-long dl-arrow" aria-hidden="true"></i>
-          </a>
-        </div>
+          </a> -->
 
-        <div class="dl-cta">
-          <a class="dl-cta-btn" href="/files/2026/jp/jp_all.zip" download>
+        <!-- </div> -->
+
+
+        <div class="dl-bulk mt-6">
+          <div class="dl-bulk__head">
+            <p class="dl-bulk__title">
+              <span class="dl-icon"><i class="fa-solid fa-file-pdf"></i></span>
+              <span>募集要項＆願書（2026）一括ダウンロード</span>
+            </p>
+            <p class="dl-bulk__sub">言語を選択してください</p>
+          </div>
+
+          <div class="dl-bulk__grid">
+            <a class="dl-bulk__btn is-jp" href="pdf/guidelines.pdf" target="_blank">日本語</a>
+            <a class="dl-bulk__btn is-en" href="pdf/guidelines_en.pdf" target="_blank">English</a>
+            <a class="dl-bulk__btn is-vi" href="pdf/guidelines_vn.pdf" target="_blank">Tiếng Việt</a>
+            <a class="dl-bulk__btn is-np" href="pdf/guidelines_np.pdf" target="_blank">नेपाली</a>
+            <a class="dl-bulk__btn is-my" href="pdf/guidelines_my.pdf" target="_blank">မြန်မာ</a>
+          </div>
+        </div>
+        <!-- <div class="dl-cta mt-5">
+          <a class="dl-cta-btn" href="pdf/guidelines.pdf">
             <i class="fa-solid fa-file-zipper" aria-hidden="true"></i>
-            <span>2026年度 募集要項＆願書 PDF（日本人用）一括ダウンロード</span>
+            <span>募集要項＆願書 (2026年度)</span>
           </a>
         </div>
+        <div class="dl-cta mt-5">
+          <a class="dl-cta-btn" href="pdf/guidelines_vn.pdf">
+            <i class="fa-solid fa-file-zipper" aria-hidden="true"></i>
+            <span>Application Guidelines (2026 Academic YearOoka)</span>
+          </a>
+        </div>
+        <div class="dl-cta mt-5">
+          <a class="dl-cta-btn" href="pdf/guidelines_vn.pdf">
+            <i class="fa-solid fa-file-zipper" aria-hidden="true"></i>
+            <span>Yêu cầu tuyển dụng (năm 2026)</span>
+          </a>
+        </div>
+        <div class="dl-cta mt-5">
+          <a class="dl-cta-btn" href="pdf/guidelines_my.pdf">
+            <i class="fa-solid fa-file-zipper" aria-hidden="true"></i>
+            <span>ရလ ျော ်လွှျောလမ်ီးညွှန် (2026ခုနှစ်)</span>
+          </a>
+        </div> -->
+
       </div>
     </section>
 
@@ -220,5 +250,6 @@
           <!-- <div class="text-center text-xs opacity-75">© 2024 Toyooka Global Business Program. All rights reserved.</div> -->
         </div>
       </footer>
+       <script src="script/custom.js"></script>
   </body>
 </html>

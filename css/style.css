@@ -3,12 +3,8 @@
 ========================= */
 :root {
   --container: 1120px;
-
-  /* spacing */
   --section-y: clamp(56px, 6vw, 92px);
   --section-head-gap: clamp(22px, 2.4vw, 34px);
-
-  /* typography */
   --font-sans: "Noto Sans JP", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic",
     "Meiryo", sans-serif;
   --text: #0f172a;
@@ -49,12 +45,10 @@ body {
   padding-inline: clamp(12px, 2vw, 20px);
 }
 
-/* Reserve space for fixed bars */
 body {
   padding-top: calc(var(--langbar-h, 48px) + var(--header-h, 76px));
 }
 
-/* Smooth anchor offset for fixed header */
 section[id] {
   scroll-margin-top: calc(var(--langbar-h, 48px) + var(--header-h, 76px) + 14px);
 }
@@ -444,7 +438,6 @@ img {
   line-height: 1.75;
 }
 
-/* color variants */
 .section--blue .section-badge {
   background: rgba(219, 234, 254, 0.7);
   color: #1d4ed8;
@@ -507,20 +500,16 @@ span {
   }
 }
 
-/* ===== Strength: imgtxt block style (not full width, uses .section-max) ===== */
 .imgtxt-list {
   display: grid;
   gap: 28px;
   margin-top: 18px;
 }
 
-/* wrapper */
 .imgtxt {
   position: relative;
   min-height: 320px;
 }
-
-/* image block (overlapping) */
 .imgtxt__img {
   position: absolute;
   left: 0;
@@ -544,7 +533,6 @@ span {
   object-position: center;
 }
 
-/* text block (like your sample) */
 .imgtxt__txt {
   background: #18327c;
   color: #fff;
@@ -559,7 +547,6 @@ span {
   height: 100%;
 }
 
-/* soft pattern so it looks “designed”, not flat */
 .imgtxt__txt::before {
   content: "";
   position: absolute;
@@ -571,8 +558,6 @@ span {
 .imgtxt__txt > * {
   position: relative;
 }
-
-/* icon */
 .imgtxt__icon {
   min-width: 44px;
   height: 44px;
@@ -582,7 +567,6 @@ span {
   justify-content: center;
   font-size: 18px;
   box-shadow: 0 14px 24px rgba(0, 0, 0, 0.25);
-  /* margin-bottom: 10px; */
 }
 .imgtxt__icon.is-blue {
   background: #2563eb;
@@ -594,7 +578,6 @@ span {
   background: #22c55e;
 }
 
-/* typography */
 .imgtxt__h3 {
   font-size: 22px;
   font-weight: 900;
@@ -608,7 +591,6 @@ span {
   color: rgba(255, 255, 255, 0.92);
 }
 
-/* note box (optional) */
 .imgtxt__note {
   margin-top: 14px;
   border-radius: 14px;
@@ -636,7 +618,7 @@ span {
 }
 .imgtxt--rev .imgtxt__txt {
   margin: 0 auto 0 0;
-  padding: 22px 46.7% 22px 28px; /* chừa chỗ ảnh bên phải */
+  padding: 22px 46.7% 22px 28px;
 }
 
 /* ===== Responsive: image on top, text below ===== */
@@ -746,7 +728,6 @@ span {
   background: rgba(15, 23, 42, 0.02);
 }
 
-/* responsive: bảng không vỡ trên mobile */
 @media (max-width: 768px) {
   .company-table {
     display: block;
@@ -763,7 +744,6 @@ span {
   }
 }
 
-/* Right side floating stack */
 .floating-ctas {
   position: fixed;
   right: 18px;
@@ -811,7 +791,6 @@ span {
   white-space: nowrap;
 }
 
-/* Variants */
 .floating-btn--pdf {
   background: linear-gradient(135deg, #1d4ed8, #2563eb);
 }
@@ -820,7 +799,6 @@ span {
   background: linear-gradient(135deg, #059669, #10b981);
 }
 
-/* Hover */
 @media (hover: hover) {
   .floating-btn:hover {
     transform: translateX(-2px);
@@ -829,7 +807,6 @@ span {
   }
 }
 
-/* Mobile: compact (icon only) */
 @media (max-width: 640px) {
   .floating-ctas {
     right: 12px;
@@ -864,29 +841,17 @@ canvas {
   height: auto;
 }
 
-/* Give anchor jumps room for fixed bars */
 section[id],
 [id].anchor {
   scroll-margin-top: calc(var(--langbar-h, 48px) + var(--header-h, 76px) + 16px);
 }
 
-/* Content container used in some pages */
-/* .content-width {
-  max-width: 1120px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
-  padding-inline: clamp(16px, 3vw, 24px);
-} */
 .content-width {
   max-width: var(--container);
   margin-left: auto;
   margin-right: auto;
-  padding-inline: clamp(16px, 3vw, 24px); /* giống section-max */
+  padding-inline: clamp(16px, 3vw, 24px);
 }
-
-/* Small screens: reduce horizontal padding a bit */
 @media (max-width: 640px) {
   .section-max {
     padding-left: 1rem;
@@ -929,7 +894,6 @@ section[id],
   max-width: 100%;
 }
 #nav-desktop .nav-eq {
-  /* equal width buttons */
   width: clamp(7rem, 8.5vw, 10rem);
   justify-content: center;
   text-align: center;
@@ -941,7 +905,6 @@ section[id],
   }
 }
 
-/* prevent long labels from breaking layout */
 .nav-chip span {
   display: block;
   overflow: hidden;
@@ -1219,6 +1182,7 @@ body {
 }
 
 /* Access address + map */
+
 .access-address__inner {
   background: #fff;
   border: 1px solid rgba(15, 23, 42, 0.08);
@@ -1312,7 +1276,6 @@ body {
   filter: brightness(0.97);
 }
 
-/* Map area */
 .access-address__map {
   margin-top: 14px;
   border-radius: 18px;
@@ -1328,7 +1291,6 @@ body {
   display: block;
 }
 
-/* Responsive */
 @media (max-width: 900px) {
   .access-address__addr {
     font-size: 18px;

@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <title>豊岡式グローバルビジネス学科 LP</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+    content="The Toyooka-Style Global Business Department is a new experiential vocational education model that integrates Learning, Working, Living and Employment." />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+
+  <body class="h-full w-full">
+    <div id="app-root" class="app-wrapper bg-blue-50 flex flex-col">
+      <div id="langbar" class="fixed-bar w-full lang-blur border-b border-blue-700/60">
+        <div class="section-max px-6 py-2 flex items-center justify-between gap-3">
+          <div class="flex items-center gap-2 text-xs text-white/95"></div>
+
+          <div class="lang-wrap flex items-center gap-2">
+            <a href="../index.html" class="lang-pill bg-white/20 text-white hover:bg-white/25">日本語</a>
+            <a href="" class="lang-pill bg-white/20 active text-white hover:bg-white/25">English</a>
+            <a href="../vn/index.html" class="lang-pill bg-white/20 text-white hover:bg-white/25">Tiếng Việt</a>
+            <a href="../np/index.html" class="lang-pill bg-white/20 text-white hover:bg-white/25">नेपाली भाषा</a>
+            <a href="../my/index.html" class="lang-pill bg-white/20 text-white hover:bg-white/25">မြန်မာ</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Header -->
+      <header id="main-header" class="fixed-header w-full nav-blur header-elevated border-b border-gray-200/60">
+        <nav class="section-max px-6 pt-4 pb-3 flex items-center justify-between">
+          <div class="flex items-center gap-3 min-w-0">
+            <a href="" class="flex items-center gap-3 group min-w-0">
+              <div id="logo-mark" class="w-12 h-12 flex items-center justify-center text-white">
+                <img src="../images/logo.webp" alt="学校法人大岡学園 ロゴ" />
+              </div>
+              <div class="flex flex-col leading-tight min-w-0">
+                <span id="nav-sub-title" class="text-2xl font-bold text-gray-800 truncate"> 学校法人大岡学園 </span>
+              </div>
+            </a>
+          </div>
+
+          <!-- Desktop nav -->
+          <div id="nav-desktop" class="hidden lg:flex items-center gap-2 text-sm font-semibold text-gray-800">
+            <a href="#strength" class="nav-chip nav-eq"><span>Strengths</span></a>
+            <a href="#curriculum" class="nav-chip nav-eq"><span>Timetable</span></a>
+            <a href="#career" class="nav-chip"><span>Employment and Part-Time Jobs</span></a>
+            <a href="#fee" class="nav-chip nav-eq"><span>Tuition Fees</span></a>
+            <a href="#access" class="nav-chip nav-eq"><span>Access</span></a>
+          </div>
+
+          <!-- Mobile menu button -->
+          <button
+            id="mobile-menu-btn"
+            type="button"
+            class="lg:hidden inline-flex items-center justify-center w-11 h-11 rounded-2xl bg-white/70 text-blue-700 border border-blue-100 hover:bg-white transition shadow-sm"
+            aria-controls="mobile-menu"
+            aria-expanded="false"
+            aria-label="Open menu"
+          >
+            <i class="fas fa-bars"></i>
+          </button>
+        </nav>
+
+        <!-- Mobile menu sheet -->
+        <div id="mobile-menu" class="mobile-menu-panel lg:hidden hidden">
+          <div class="section-max px-4 pb-4">
+            <div class="mobile-sheet bg-white/95 border border-gray-200/70 overflow-hidden">
+              <div class="px-4 py-3 flex items-center justify-between border-b border-gray-100">
+                <div class="text-sm font-black text-gray-800">Menu</div>
+              </div>
+
+              <div class="p-2 grid gap-2">
+                <a href="#strength" class="px-4 py-3 rounded-2xl hover:bg-blue-50 transition flex items-center justify-between">
+                  <span class="flex items-center gap-2"><i class="fas fa-star text-blue-600"></i>Strengths</span>
+                  <i class="fas fa-chevron-right text-gray-400"></i>
+                </a>
+                <a href="#curriculum" class="px-4 py-3 rounded-2xl hover:bg-blue-50 transition flex items-center justify-between">
+                  <span class="flex items-center gap-2"><i class="fas fa-book text-blue-600"></i>Timetable</span>
+                  <i class="fas fa-chevron-right text-gray-400"></i>
+                </a>
+                <a href="#career" class="px-4 py-3 rounded-2xl hover:bg-blue-50 transition flex items-center justify-between">
+                  <span class="flex items-center gap-2"><i class="fas fa-briefcase text-blue-600"></i>Employment and Part-Time Jobs</span>
+                  <i class="fas fa-chevron-right text-gray-400"></i>
+                </a>
+                <a href="#fee" class="px-4 py-3 rounded-2xl hover:bg-blue-50 transition flex items-center justify-between">
+                  <span class="flex items-center gap-2"><i class="fas fa-yen-sign text-blue-600"></i>Tuition Fees</span>
+                  <i class="fas fa-chevron-right text-gray-400"></i>
+                </a>
+                <a href="#access" class="px-4 py-3 rounded-2xl hover:bg-blue-50 transition flex items-center justify-between">
+                  <span class="flex items-center gap-2"><i class="fas fa-location-dot text-blue-600"></i>Access</span>
+                  <i class="fas fa-chevron-right text-gray-400"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <style>
+        .nav-chip{
+          padding: 8px;
+        }
+        .nav-chip span {
+          font-size: 13px;
+        }
+        @media (max-width: 640px) {
+        .timeline-year .gap-3{
+          display: block;
+          text-align: center;
+        }
+        .timeline-year .gap-3 .min-w-20{
+          margin-bottom: 15px;
+        }
+        }
+
+      </style>
+      <main id="main-content" class="flex-1 w-full">
+        <div>
+          <img src="../images/topimg_en.webp" alt="" />
+        </div>
+
+        <!-- Strength Section (docx) -->
+        <section id="strength" class="w-full bg-white py-16 md:py-20 wave-bottom relative">
+          <div class="floating-circles">
+            <div class="circle circle-2"></div>
+            <div class="circle circle-3"></div>
+          </div>
+          <div class="triangle-bottom-left"></div>
+          <div class="diagonal-stripe diagonal-stripe-top"></div>
+
+          <div class="section-max px-6 relative z-10">
+            <header class="section-head fade-in-up section--blue">
+              <div class="section-title">
+                <h2 class="text-3xl md:text-4xl text-blue-900 font-black">Strengths — Why the Toyooka-Style is Chosen</h2>
+              </div>
+            </header>
+
+            <!-- 3 items -->
+            <div class="imgtxt-list">
+              <!-- Item 1: image left / text right -->
+              <article class="imgtxt fade-in-up">
+                <figure class="imgtxt__img">
+                  <img src="../images/strength_1.webp" alt="地域とつながる実践教育" loading="lazy" />
+                </figure>
+
+                <div class="imgtxt__txt">
+                  <div class="flex items-center gap-2 mb-3">
+                    <div class="imgtxt__icon is-blue"><i class="fas fa-map-marked-alt"></i></div>
+                    <span class="text-2xl font-bold alight-center">Practical Education Connected to the Local Community</span>
+                  </div>
+                  <p class="imgtxt__p">
+                    Collaborating with local tourism, manufacturing, and retail businesses such as Kinosaki Onsen, Toyooka bags, Izushi soba, and Tajima beef. Students can apply the knowledge learned at school within the San’in Geopark.
+                  </p>
+                  <p class="imgtxt__p mt-2">Business, Japanese language, and IT knowledge acquired in classes and practical training can be used directly in local workplaces.<br />
+                    Students gain experience in diverse practical settings such as ryokan inns, hotels, retail shops, manufacturing workshops, and tourist information centers.
+                  </p>
+
+                  <div class="imgtxt__note is-blue">
+                    <p class="imgtxt__noteP">
+                      <span class="font-semibold text-xl">Features: </span><br />
+                      ・A Campus for Experiential Learning Beyond the Classroom<br />
+                      ・Hands-on experiences through outsourcing, local projects, PR activities, and hospitality using native cuisine.<br />
+                      ・Supported collaboratively by teachers, companies, students, and local government.
+                    </p>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Item 2: reverse (image right / text left) -->
+              <article class="imgtxt imgtxt--rev fade-in-up">
+                <figure class="imgtxt__img">
+                  <img src="../images/strength_2.webp" alt="地域の街並みと働く環境" loading="lazy" />
+                </figure>
+
+                <div class="imgtxt__txt">
+                  <div class="flex items-center gap-2 mb-3">
+                    <div class="imgtxt__icon is-orange"><i class="fas fa-briefcase"></i></div>
+                    <span class="text-xl font-bold alight-center">A wide variety of part-time job and internship opportunities</span>
+                  </div>
+
+                  <p class="imgtxt__p">
+                    There are many places for practical training within commuting distance, such as inns, hotels, restaurants, and workshops.
+                    In the second year, you will work at a company as an intern and gain experience that leads to employment.
+                  </p>
+
+                  <div class="imgtxt__note is-blue">
+                    <p class="imgtxt__noteP">
+                      <span class="font-semibold text-xl">Main Part-Time Job and Internship Destinations: </span><br />
+                      ・Ryokan Inns and Hotels (Customer Service / Front Desk)<br />
+                      ・Restaurants and Retail Shops (Hall Service / Cooking Assistance / Cashier)<br />
+                      ・Toyooka Bag Manufacturing and Sales Workshops (Hands-on Craft Experience)<br />
+                      ・Tourist Information Centers and Local Event Staff
+                    </p>
+                  </div>
+
+                  <div class="imgtxt__note is-blue">
+                    <p class="imgtxt__noteP">
+                      <span class="font-semibold text-xl">Features: </span><br />
+                      ・Many workplaces within commuting distance (walking or cycling distance)<br />
+                      ・Safe support based on the rule of working up to 28 hours per week<br />
+                      ・The school collaborates with companies to assist with introductions, interviews, and contracts
+                    </p>
+                  </div>
+                </div>
+              </article>
+
+
+              <!-- Item 3: image left / text right -->
+              <article class="imgtxt fade-in-up">
+                <figure class="imgtxt__img">
+                  <img src="../images/strength_3.webp" alt="安心のサポート体制" loading="lazy" />
+                </figure>
+
+                <div class="imgtxt__txt">
+                  <div class="flex items-center gap-2 mb-3">
+                    <div class="imgtxt__icon is-green"><i class="fas fa-shield-alt"></i></div>
+                    <span class="text-2xl font-bold alight-center">Reliable Support System</span>
+                  </div>
+                  <p class="imgtxt__p">
+                    Comprehensive support for international students, including housing assistance, Japanese language support, and medical/life consultations.						
+						        We provide an environment where students can learn and work with peace of mind.
+                  </p>
+
+                  <div class="imgtxt__note is-green">
+                    <p class="imgtxt__noteP">
+                      <span class="font-semibold text-xl">Support Services: </span><br />
+                      ・Housing Assistance (Apartments / Share Houses)<br />
+                      ・Medical and Life Consultations (with Interpreter Support)<br />
+                      ・Support for “Student” Visa Renewal During Enrollment<br />
+                      ・Assistance in Obtaining a “Work” Visa After Graduation<br />
+                      ・Interpretation and Administrative Support in Emergencies
+                    </p>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <!-- Curriculum Section (your code used id=hero but nav points to #curriculum -> keep as you had?  -->
+        <section id="curriculum" class="w-full bg-gradient-to-br from-blue-50 to-blue-100 relative overflow-hidden py-16 md:py-20">
+          <div class="floating-circles">
+            <div class="circle circle-1"></div>
+            <div class="circle circle-2"></div>
+            <div class="circle circle-3"></div>
+          </div>
+          <div class="triangle-top-right"></div>
+          <div class="diagonal-stripe diagonal-stripe-bottom"></div>
+
+          <div class="section-max px-6 relative z-10">
+            <header class="section-head fade-in-up section--blue">
+              <div class="section-title">
+                <h2 class="text-3xl md:text-4xl text-blue-900 font-black">Timetable — 3 Days Off per Week</h2>
+              </div>
+              <p class="section-lead text-base md:text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed mt-6">
+                A curriculum directly linked to employment<br>
+                Systematically learning Japanese, Business, IT, and Tourism, we cultivate professionals who can succeed in local communities and the tourism industry.						
+              </p>
+            </header>
+
+            <!-- Schedule -->
+            <div class="mx-auto scale-in">
+              <div class="cute-card bg-white p-6 border-t-4 border-blue-600">
+                <h3 class="text-2xl font-black text-gray-800 mb-4 flex items-center gap-2"><i class="fas fa-clock text-blue-600"></i>Basic Learning Schedule</h3>
+                <div class="space-y-3">
+                  <div class="flex items-center gap-4 p-4 bg-blue-50 rounded-lg border-l-4 border-blue-600">
+                    <div class="text-center min-w-[100px]">
+                      <i class="fas fa-sun text-blue-600 text-2xl mb-1"></i>
+                      <p class="text-sm font-bold text-blue-700">9:00〜12:00</p>
+                    </div>
+                    <div class="flex-1">
+                      <p class="font-bold text-xl text-gray-800">Classes</p>
+                      <p class="text-gray-600">Japanese, Business, IT, Tourism Practice</p>
+                    </div>
+                  </div>
+                  <div class="flex items-center gap-4 p-4 bg-orange-50 rounded-lg border-l-4 border-orange-500">
+                    <div class="text-center min-w-[100px]">
+                      <i class="fas fa-cloud-sun text-orange-500 text-2xl mb-1"></i>
+                      <p class="text-sm font-bold text-orange-700">13:00〜15:00</p>
+                    </div>
+                    <div class="flex-1">
+                      <p class="font-bold text-xl text-gray-800">Practical Training, Project Work, and Presentation Practice</p>
+                    </div>
+                  </div>
+                  <div class="flex items-center gap-4 p-4 bg-green-50 rounded-lg border-l-4 border-green-500">
+                    <div class="text-center min-w-[100px]">
+                      <i class="fas fa-moon text-green-600 text-2xl mb-1"></i>
+                      <p class="text-sm font-bold text-green-700">16:00 following</p>
+                    </div>
+                    <div class="flex-1">
+                      <p class="font-bold text-xl text-gray-800">Part-Time Jobs, Internships, and Self-Study Time</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <br><br>
+
+            <!-- Compact Timeline -->
+            <div class="mx-auto mb-12">
+              <div class="timeline-compact">
+                <!-- Year 1 -->
+                <div class="timeline-year fade-in-left">
+                  <div class="bg-white p-6 rounded-xl shadow-lg border-l-4 border-blue-600">
+                    <div class="flex items-center gap-3 mb-4">
+                      <div class="min-w-20 h-10 px-2 rounded-xl bg-blue-600 flex items-center justify-center text-white font-black shadow-lg">1st Year</div>
+                      <h3 class="text-2xl font-black text-gray-800">Learning and Local Experiences</h3>
+                    </div>
+                    <ul class="space-y-2 text-sm text-gray-700 mb-4">
+                      <li class="flex items-start gap-2">
+                        <i class="fas fa-check-circle text-blue-600 mt-1"></i>
+                        <span>Acquire the Basics of Japanese and Business</span>
+                      </li>
+                      <li class="flex items-start gap-2">
+                        <i class="fas fa-check-circle text-blue-600 mt-1"></i> <span>Visit and Experience Local Tourist Facilities and Companies</span>
+                      </li>
+                      <li class="flex items-start gap-2">
+                        <i class="fas fa-check-circle text-blue-600 mt-1"></i>
+                        <span>Team Presentations on Local Issues</span>
+                      </li>
+                    </ul>
+                    <div class="p-3 bg-blue-50 rounded-lg border border-blue-200">
+                      <p class="text-xs text-gray-700">
+                        <i class="fas fa-lightbulb text-blue-600 mr-1"></i>
+                        <strong>Example: </strong>"Plan recommended experiences for tourists visiting Kinosaki Onsen"<br>「Promote the appeal of Toyooka bags on social media」	
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Year 2 -->
+                <div class="timeline-year fade-in-right">
+                  <div class="bg-white p-6 rounded-xl shadow-lg border-l-4 border-orange-500">
+                    <div class="flex items-center gap-3 mb-4">
+                      <div class="min-w-20 h-10 px-2 rounded-xl bg-orange-500 flex items-center justify-center text-white font-black shadow-lg">2nd Year</div>
+                      <h3 class="text-2xl font-black text-gray-800">Internships and Job Preparation</h3>
+                    </div>
+                    <ul class="space-y-2 text-sm text-gray-700 mb-4">
+                      <li class="flex items-start gap-2">
+                        <i class="fas fa-check-circle text-orange-500 mt-1"></i>
+                        <span><strong class="text-orange-700 text-base">2–3 Days per Week Company Internships</strong> (Customer Service, Sales, Planning, etc.)</span>
+                      </li>
+                      <li class="flex items-start gap-2">
+                        <i class="fas fa-check-circle text-orange-500 mt-1"></i> <span>Business Etiquette, Interview Preparation, Resume Writing</span>
+                      </li>
+                      <li class="flex items-start gap-2">
+                        <i class="fas fa-check-circle text-orange-500 mt-1"></i>
+                        <span>Japanese Language Proficiency Test (JLPT) N2 and N1 Preparation Courses</span>
+                      </li>
+                    </ul>
+
+                    <div class="grid grid-cols-2 gap-2">
+                      <div class="p-2 bg-orange-50 rounded-lg border border-orange-200 text-center">
+                        <i class="fas fa-language text-orange-500 text-lg mb-1"></i>
+                        <p class="text-xs font-bold text-gray-700">Applied Japanese I & II</p>
+                      </div>
+                      <div class="p-2 bg-orange-50 rounded-lg border border-orange-200 text-center">
+                        <i class="fas fa-chart-line text-orange-500 text-lg mb-1"></i>
+                        <p class="text-xs font-bold text-gray-700">Tourism Marketing</p>
+                      </div>
+                      <div class="p-2 bg-orange-50 rounded-lg border border-orange-200 text-center">
+                        <i class="fas fa-laptop-code text-orange-500 text-lg mb-1"></i>
+                        <p class="text-xs font-bold text-gray-700">Practical IT Skills</p>
+                      </div>
+                      <div class="p-2 bg-orange-50 rounded-lg border border-orange-200 text-center">
+                        <i class="fas fa-user-tie text-orange-500 text-lg mb-1"></i>
+                        <p class="text-xs font-bold text-gray-700">Career Design</p>
+                      </div>
+                    </div>
+
+                    <div class="mt-4 p-3 bg-white/70 rounded-lg border border-orange-200">
+                      <p class="text-xs text-gray-700">
+                        <strong class="text-orange-700">Example Curriculum: </strong><br />
+                        ・Applied Japanese I & II<br />
+                        ・Tourism Marketing<br />
+                        ・Practical IT Skills (Excel, Word, Web)<br />
+                        ・Local Project Practicum<br />
+                        ・Career Design and Employment Guidance
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+        
+          </div>
+        </section>
+
+        <!-- Career Section (docx) -->
+        <section id="career" class="w-full bg-white py-16 md:py-20 wave-top wave-bottom relative">
+          <div class="floating-circles">
+            <div class="circle circle-2"></div>
+            <div class="circle circle-1"></div>
+          </div>
+          <div class="triangle-top-right"></div>
+          <div class="diagonal-stripe diagonal-stripe-bottom"></div>
+          <div class="section-max px-6 relative z-10">
+            <header class="section-head fade-in-up section--green">
+              <div class="section-title">
+                <h2 class="text-3xl md:text-4xl font-black text-blue-900">Employment and Part-Time Jobs — Building Your Career While Working</h2>
+              </div>
+              <p class="section-lead text-base md:text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed mt-6">
+                Toyooka-Style Employment Model<br>
+                "Learning → Part-Time Job → Internship → Employment"<br>
+                A major feature of the Toyooka-Style is that this process can be completed entirely within a single department.
+              </p>
+            </header>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-12">
+                <div class="cute-card round-card bg-blue-50 fade-in-left">
+                    <i class="fas fa-hotel text-4xl text-blue-600 mb-3"></i>
+                    <h4 class="font-black text-xl text-gray-800 mb-2">Major Employment Industries</h4>
+                </div>
+
+                <div class="cute-card round-card bg-orange-50 fade-in-up">
+                    <i class="fas fa-utensils text-4xl text-orange-500 mb-3"></i>
+                    <h4 class="font-black text-xl text-gray-800 mb-2">Food, Retail, and Distribution Industry</h4>
+                    <p class="text-md text-gray-600">Restaurants, Shops</p>
+                </div>
+
+                <div class="cute-card round-card bg-green-50 fade-in-up">
+                    <i class="fas fa-shopping-bag text-4xl text-green-600 mb-3"></i>
+                    <h4 class="font-black text-xl text-gray-800 mb-2">Manufacturing and Creative Industry</h4>
+                    <p class="text-md text-gray-600">Toyooka Bags, Local Brands</p>
+                </div>
+
+                <div class="cute-card round-card bg-blue-50 fade-in-right">
+                    <i class="fas fa-hands-helping text-4xl text-blue-600 mb-3"></i>
+                    <h4 class="font-black text-xl text-gray-800 mb-2">Care and Service Industry </h4>
+                    <p class="text-md text-gray-600">Support for Foreigners, Community Assistance</p>
+                </div>
+            </div>
+
+    
+
+            <div class="grid md:grid-cols-2 gap-8 mb-12">
+              <div class="cute-card bg-gradient-to-br from-green-50 to-green-100 p-8 border-t-4 border-green-500 fade-in-left">
+                <div class="flex items-center gap-3 mb-6">
+                  <h3 class="text-2xl font-black text-gray-800">School Support Services + Planned Part-Time Job Placement Locations</h3>
+                </div>
+
+                <ul class="space-y-3 text-sm text-gray-700">
+                  <li class="flex items-start gap-2"><i class="fas fa-check-circle text-green-600 mt-1"></i>Individual Career Counseling (Guidance Interviews)</li>
+                  <li class="flex items-start gap-2"><i class="fas fa-check-circle text-green-600 mt-1"></i>Resume and Interview Practice</li>
+                  <li class="flex items-start gap-2"><i class="fas fa-check-circle text-green-600 mt-1"></i>Company Visits and Matching Events</li>
+                  <li class="flex items-start gap-2"><i class="fas fa-check-circle text-green-600 mt-1"></i>Support for Work Visa Applications After Graduation</li>
+                </ul>
+              </div>
+
+              <img
+                src="../images/career.webp"
+                alt="就職活動の様子"
+                class="w-full h-full object-cover rounded-xl shadow-xl cute-card scale-in"
+                onerror="this.removeAttribute('src'); this.style.display='none';"
+              />
+            </div>
+
+            <table class="company-table">
+                <thead>
+                    <tr>
+                    <th>Facility Name</th>
+                    <th>Type of Business</th>
+                    <th>Main Job Responsibilities</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                    <td>TK Foods Co., Ltd.</td>
+                    <td>Meat Wholesale and Processing Industry</td>
+                    <td>Processing raw meat into products, including preparation, packaging, and shipping</td>
+                    </tr>
+                    <tr>
+                    <td>Toyooka Tomaki Cafeteria</td>
+                    <td>Food and Beverage Industry</td>
+                    <td>Customer Service, Cooking, and Related Tasks</td>
+                    </tr>
+                    <tr>
+                    <td>Meiwa Packs Co., Ltd.</td>
+                    <td>Manufacturing Industry</td>
+                    <td>Manufacturing of Packaging Materials</td>
+                    </tr>
+                    <tr>
+                    <td>Meiwa Sansho Co., Ltd. </td>
+                    <td>Manufacturing Industry</td>
+                    <td>Manufacturing of Packaging Materials</td>
+                    </tr>
+                    <tr>
+                    <td>Hotel Kanpasakura</td>
+                    <td>Hospitality Industry</td>
+                    <td>General Hotel and Ryokan Operations</td>
+                    </tr>
+                    <tr>
+                    <td>Manba Kogen Lodge</td>
+                    <td>Hospitality Industry</td>
+                    <td>General Accommodation Operations at a Ski Resort</td>
+                    </tr>
+                </tbody>
+                </table>
+
+          </div>
+        </section>
+
+        <!-- Fee Section (docx) -->
+        <section id="fee" class="w-full bg-blue-50 py-16 md:py-20 wave-top relative">
+          <div class="floating-circles">
+            <div class="circle circle-3"></div>
+            <div class="circle circle-1"></div>
+          </div>
+          <div class="triangle-bottom-right"></div>
+          <div class="section-max px-6 relative z-10">
+            <header class="section-head fade-in-up section--green">
+              <div class="section-title">
+                <h2 class="text-3xl md:text-4xl font-black text-blue-900">Tuition Fees — Installment Payments and Scholarship System Available</h2>
+              </div>
+            </header>
+
+            <div class="grid lg:grid-cols-2 gap-8">
+              <div class="cute-card bg-white p-8 border-l-4 border-green-500 fade-in-left">
+                <h3 class="text-2xl font-black text-gray-800 mb-6 flex items-center gap-2">
+                  Application Type & First-Year Tuition Fee
+                </h3>
+
+                <div class="space-y-3">
+                  <div class="flex justify-between items-center p-4 bg-blue-50 rounded-lg border-l-4 border-blue-600">
+                    <div class="box_fee">
+                      <p class="font-bold text-gray-800">AO Entry</p>
+                      <p class="text-xs text-gray-600">June 3, 2025 – September 18, 2025</p>
+                    </div>
+                    <p class="text-2xl font-black text-blue-600">¥690,000</p>
+                  </div>
+
+                  <div class="flex justify-between items-center p-4 bg-blue-50 rounded-lg border-l-4 border-blue-600">
+                    <div class="box_fee">
+                      <p class="font-bold text-gray-800">Early ①</p>
+                      <p class="text-xs text-gray-600">September 19, 2025 – November 20, 2025</p>
+                    </div>
+                    <p class="text-2xl font-black text-blue-600">¥710,000</p>
+                  </div>
+
+                  <div class="flex justify-between items-center p-4 bg-orange-50 rounded-lg border-l-4 border-orange-500">
+                    <div class="box_fee">
+                      <p class="font-bold text-gray-800">Early ②</p>
+                      <p class="text-xs text-gray-600">November 21, 2025 – January 20, 2026</p>
+                    </div>
+                    <p class="text-2xl font-black text-orange-600">¥730,000</p>
+                  </div>
+
+                  <div class="flex justify-between items-center p-4 bg-orange-50 rounded-lg border-l-4 border-orange-500">
+                    <div class="box_fee">
+                      <p class="font-bold text-gray-800">Regular</p>
+                      <p class="text-xs text-gray-600">January 21, 2026 – February 27, 2026</p>
+                    </div>
+                    <p class="text-2xl font-black text-orange-600">¥790,000</p>
+                  </div>
+                </div>
+
+                <div class="mt-6 p-4 bg-green-50 rounded-xl border border-green-200 text-sm text-gray-700">
+                  <p class="font-bold text-green-700 mb-2"><i class="fas fa-circle-info mr-1"></i> Payment Methods</p>
+                  <ul class="space-y-2 text-xs">
+                    <li>・Installment Payment System（Available: Pay half at enrollment + remaining balance within 3 months）</li>
+                    <li>・Bank transfer to a designated Japanese account</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="space-y-6 fade-in-right">
+                <div class="cute-card bg-white p-6 border-green-500 fade-in-right border-r-4">
+                <h3 class="text-2xl font-black text-gray-800 mb-6 flex items-center gap-2">
+                  Tuition Fee Breakdown (First Year)
+                </h3>
+
+                    <div class="space-y-3">
+                  <div class="flex justify-between items-center p-4 bg-green-50 rounded-lg border-l-4 border-green-600">
+                    <div>
+                      <p class="font-bold text-gray-800">Tuition Fee</p>
+                    </div>
+                    <p class="text-2xl font-black text-green-600">540,000円</p>
+                  </div>
+
+                  <div class="flex justify-between items-center p-4 bg-green-50 rounded-lg border-l-4 border-green-600">
+                    <div>
+                      <p class="font-bold text-gray-800">Facility Fee</p>
+                    </div>
+                    <p class="text-2xl font-black text-green-600">120,000円</p>
+                  </div>
+
+                  <div class="flex justify-between items-center p-4 bg-green-50 rounded-lg border-l-4 border-green-600">
+                    <div>
+                      <p class="font-bold text-gray-800">Teaching Materials Fee</p>
+                    </div>
+                    <p class="text-2xl font-black text-green-600">30,000円</p>
+                  </div>
+
+                  <h4 class="text-xl font-black text-gray-800 mb-4 flex items-center gap-2"><i class="fas fa-gift text-green-600"></i> Scholarship System</h4>
+                  <ul class="space-y-3 text-sm text-gray-700">
+                    <li class="flex items-start gap-2 text-sm"> <span><strong class="text-green-700">Academic Excellence Scholarship</strong>: Up to <strong class="text-green-700 text-xl text-bold">¥100,000 reduction</strong></span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span><strong class="text-green-700 text-sm">Financial Support Scholarship</strong>: Aid provided based on screening</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span><strong class="text-green-700 text-sm">Regional Company Collaboration Scholarship</strong>: Support from corporate sponsors</span>
+                    </li>
+                  </ul>
+
+                  <h4 class="text-xl font-black text-gray-800 mb-4 flex items-center gap-2">Special Notes</h4>
+                  <p class="text-sm">Re-enrollment and transfer systems available</p>
+                  <p class="text-sm">Overseas applicants can complete payment procedures after entering Japan</p>
+                </div>
+
+                <img
+                  src="https://images.unsplash.com/photo-1554224311-beee460c201f?w=600&amp;h=300&amp;fit=crop"
+                  alt="学校の学習"
+                  class="w-full h-48 object-cover rounded-xl shadow-lg cute-card"
+                  onerror="this.removeAttribute('src'); this.style.display='none';"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Access Section (docx) -->
+        <section id="access" class="w-full bg-white py-16 md:py-20 wave-top wave-bottom relative">
+          <div class="floating-circles">
+            <div class="circle circle-1"></div>
+            <div class="circle circle-2"></div>
+          </div>
+          <div class="triangle-top-right"></div>
+          <div class="diagonal-stripe diagonal-stripe-bottom"></div>
+
+          <div class="section-max relative z-10">
+            <header class="section-head fade-in-up section--blue">
+              <div class="section-title">
+                <h2 class="text-3xl md:text-4xl font-black text-blue-900">Access — A Town Close to Osaka, Kobe, and Kinosaki Onsen</h2>
+              </div>
+              <p class="section-lead text-base md:text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed mt-6">
+                Toyooka City is a “livable town” balancing nature and urban functions.
+                The city has large supermarkets, hospitals, banks, and convenience stores, providing a safe living environment for international students.		
+              </p>
+            </header>
+
+            <div class="grid lg:grid-cols-2 gap-8">
+              <div class="cute-card bg-gradient-to-br from-blue-50 to-blue-100 p-8 border-l-4 border-blue-600 fade-in-left">
+                <h3 class="text-2xl font-black text-gray-800 mb-5 flex items-center gap-2"><i class="fas fa-train text-blue-600"></i>Location of Toyooka City</h3>
+                <ul class="space-y-3 text-sm text-gray-700">
+                  <li class="flex items-start gap-2"><i class="fas fa-check-circle text-blue-600 mt-1"></i>Osaka: About 2 hours 30 minutes (Limited Express Kounotori)</li>
+                  <li class="flex items-start gap-2"><i class="fas fa-check-circle text-blue-600 mt-1"></i>Kobe: About 2 hours</li>
+                  <li class="flex items-start gap-2"><i class="fas fa-check-circle text-blue-600 mt-1"></i>Kyoto: About 2 hours 30 minutes</li>
+                  <li class="flex items-start gap-2"><i class="fas fa-check-circle text-blue-600 mt-1"></i>Kinosaki Onsen: About 15 minutes by train</li>
+                </ul>
+
+                <div class="mt-6 p-4 bg-white/70 rounded-xl border border-blue-200">
+                  <p class="text-sm font-bold text-blue-700 mb-2">▶ Attractions of Toyooka</p>
+                  <ul class="text-xs text-gray-700 space-y-2">
+                    <li>・Hospitality experience at the world-famous tourist spot, Kinosaki Onsen</li>
+                    <li>・Toyooka Bag, a brand fusing tradition and modernity</li>
+                    <li>・Local food culture such as Izushi Soba and Tajima Beef</li>
+                    <li>・Many tourist spots including Marine World Aquarium and Amanohashidate</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="cute-card bg-gradient-to-br from-green-50 to-green-100 p-8 border-l-4 border-green-500 fade-in-right">
+                <h3 class="text-2xl font-black text-gray-800 mb-5 flex items-center gap-2"><i class="fas fa-plane text-green-600"></i>Benefits for Toyooka Residents</h3>
+                <ul class="space-y-3 text-sm text-gray-700">
+                  <li class="flex items-start gap-2"><i class="fas fa-check-circle text-green-600 mt-1"></i>Discount system for using Tajima Airport</li>
+                  <li class="flex items-start gap-2"><i class="fas fa-check-circle text-green-600 mt-1"></i>Convenient access to Tokyo and Osaka via short flights</li>
+                </ul>
+
+                <div class="mt-6">
+                  <img
+                    src="../images/travel.webp"
+                    alt="豊岡市のアクセス環境"
+                    class="w-full h-56 object-cover rounded-xl shadow-lg cute-card"
+                    onerror="this.removeAttribute('src'); this.style.display='none';"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="access-address mt-10 fade-in-up">
+              <div class="access-address__inner">
+                <div class="access-address__top">
+                  <div class="access-address__left">
+                    <div class="access-address__icon" aria-hidden="true">
+                      <i class="fas fa-location-dot"></i>
+                    </div>
+
+                    <div class="access-address__text">
+                      <p class="access-address__kicker">ACCESS</p>
+                      <p class="access-address__addr">〒668-0065　兵庫県豊岡市戸牧500-3</p>
+                    </div>
+                  </div>
+
+                  <div class="access-address__right">
+                    <a class="access-address__chip" href="tel:0796223786">
+                      <span class="label">TEL</span>
+                      <span class="value">0796-22-3786</span>
+                    </a>
+
+                    <div class="access-address__chip is-fax">
+                      <span class="label">FAX</span>
+                      <span class="value">0796-24-2282</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="access-address__map">
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m13!1m8!1m3!1d12987.152692564772!2d134.810344!3d35.534232!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMzXCsDMyJzAzLjIiTiAxMzTCsDQ4JzM3LjIiRQ!5e0!3m2!1sja!2sus!4v1765521528806!5m2!1sja!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+              </div>
+            </div>
+
+
+
+          </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="w-full bg-white py-16 md:py-20 relative">
+          <div class="floating-circles">
+            <div class="circle circle-2"></div>
+            <div class="circle circle-3"></div>
+          </div>
+          <div class="triangle-bottom-left"></div>
+          <div class="diagonal-stripe diagonal-stripe-top"></div>
+
+          <div class="section-max px-6 relative z-10">
+            <header class="section-head fade-in-up section--blue">
+              <div class="section-title">
+                <h2 class="text-3xl md:text-4xl font-black text-blue-900">Open Campus & Application Download</h2>
+              </div>
+            </header>
+
+            <div class="grid lg:grid-cols-2 gap-8">
+              <div class="cute-card bg-gradient-to-br from-blue-50 to-blue-100 p-8 border-l-4 border-blue-600 fade-in-left">
+                <h3 class="text-2xl font-black text-gray-800 mb-6 flex items-center gap-2">
+                  <i class="fas fa-calendar-alt text-blue-600"></i>Open campus ongoing！
+                </h3>
+                <ul class="space-y-3 text-gray-700 mb-6">
+                  <li class="flex items-start gap-2"><i class="fas fa-check-circle text-blue-600 mt-1"></i>Classroom experience, campus tours, and individual consultations available</li>
+                  <li class="flex items-start gap-2"><i class="fas fa-check-circle text-blue-600 mt-1"></i>Every 2nd Saturday of the month (morning only)</li>
+                  <li class="flex items-start gap-2"><i class="fas fa-check-circle text-blue-600 mt-1"></i>Online briefings also available</li>
+                </ul>
+
+                <a
+                  href="https://forms.gle/edKUzMiLNHFTjxWNA"
+                  class="w-full inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-blue-600 text-white text-lg font-bold shadow-xl hover:shadow-2xl hover:bg-blue-700 transition-all transform hover:scale-105 opencampus-btn"
+                  target="_blank"> Apply for Open Campus
+                </a>
+
+                <div class="mt-4 p-4 bg-white/70 rounded-xl border border-blue-200">
+                  <p class="text-sm font-bold text-blue-700 mb-2"><i class="fas fa-download mr-1"></i> Download Application:</p>
+                  <p class="text-xs text-gray-700">Download the Complete Application Documents (PDF) Here<br />
+                    👉 <a href="./downloads.html" class="underline text-blue-700" target="_blank"> Download Application (PDF)</a>
+                  </p>
+                </div>
+              </div>
+
+              <div class="cute-card bg-gradient-to-br from-green-50 to-green-100 p-8 border-l-4 border-green-500 fade-in-right">
+                <h3 class="text-2xl font-black text-gray-800 mb-6 flex items-center gap-2"><i class="fas fa-phone-alt text-green-600"></i>Contact Information:</h3>
+
+                <div class="space-y-5 text-gray-700">
+                  <div>
+                    <p class="font-bold text-gray-800 mb-2">For Inquiries Regarding Applications</p>
+                    <p class="flex items-center gap-2 text-sm"><i class="fas fa-envelope text-blue-600"></i> info@asiamarketing.jp</p>
+                    <p class="flex items-center gap-2 text-sm"><i class="fab fa-line text-green-600"></i> @asiamarketing</p>
+                  </div>
+
+                  <div>
+                    <p class="font-bold text-gray-800 mb-2">For Inquiries Regarding School Life</p>
+                    <p class="flex items-center gap-2 text-sm"><i class="fas fa-envelope text-blue-600"></i> info-senmonbu@oooka.ac.jp</p>
+                    <p class="flex items-center gap-2 text-sm"><i class="fas fa-phone text-green-600"></i> 0796-22-3786（Admissions Officer）</p>
+                  </div>
+
+                  <div class="p-4 bg-white/70 rounded-xl border border-green-200">
+                    <p class="text-sm font-bold text-green-700 mb-2">💬 Summary Message</p>
+                    <p class="text-xs text-gray-700 leading-relaxed">
+                      The Toyooka-Style Global Business Department is a new experiential vocational education model that integrates "Learning," "Working," "Living," and "Employment."It nurtures professionals who want to act as a bridge between Japan and their home country, grow through practical learning, and succeed globally.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-12 scale-in">
+              <img
+                src="../images/school.webp"
+                alt="キャンパス風景"
+                class="w-full h-64 object-cover rounded-xl shadow-2xl cute-card"
+                onerror="this.removeAttribute('src'); this.style.display='none';"
+              />
+            </div>
+          </div>
+        </section>
+      </main>
+
+
+      <div class="floating-ctas" aria-label="Quick links">
+        <a href="./../downloads.html" class="floating-btn floating-btn--pdf" aria-label="募集要項" target="_blank">
+          <span class="floating-btn__icon"><i class="fa-solid fa-file-pdf"></i></span>
+          <span class="floating-btn__text">Application Guidelines</span>
+        </a>
+
+        <a href="#contact" class="floating-btn floating-btn--campus" aria-label="オープンキャンパス">
+          <span class="floating-btn__icon"><i class="fa-solid fa-calendar-check"></i></span>
+          <span class="floating-btn__text">Open Campus</span>
+        </a>
+      </div>
+
+      <footer class="w-full bg-blue-600 text-white border-t-4 border-blue-700 relative">
+        <div class="floating-circles">
+          <div class="circle circle-1"></div>
+        </div>
+        <div class="section-max px-6 py-8 relative z-10">
+          <div class="text-center mb-6">
+            <p id="footer-message" class="font-black text-2xl mb-3">
+              <i class="fas fa-heart mr-2"></i> Learn in Toyooka, work in Toyooka. Your future starts here. <i class="fas fa-heart ml-2"></i>
+            </p>
+            <p class="text-sm opacity-90">Ooka Gakuen Business Vocational School　Career College Tajima　Toyooka-Style Global Business Department</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+     <script src="../script/custom.js"></script>
+  </body>
+</html>
